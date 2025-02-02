@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+.main-box {
+    background-color: pink;
+    width: 1280px;
+    height: 720px;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.top {
+    flex: 1;
+    background-color:pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bottom {
+    flex: 1;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.top > div {
+    background-color: rgb(255, 169, 169) ;
+    width: 100px;
+    transition: background-color 1s;
+}
+
+.top > div::after {
+    content: "hello Dara";
+}
+
+.top > div:hover {
+    background-color: red ;
+  
+}
+

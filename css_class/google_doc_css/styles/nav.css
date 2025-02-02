@@ -1,0 +1,125 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8px;
+
+    & > .left {
+        gap: 32px;
+        display: flex;
+        flex-direction: row;
+        & > .menu {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            & > ul {
+                color: #5F6367;
+                gap: 32px;
+                display: flex;
+                flex-direction: row;
+                
+            }
+        }
+        & > .logo > img {
+            height: 64px;
+        }
+    }
+
+    & > .right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+.try-doc {
+    background-color: #1B73E8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid #1B73E8;
+}
+
+.goto-doc {
+    background-color: white;
+    color: #1B73E8;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid #DADCE0;
+}
+
+.sign-in {
+    border: none;
+    background-color: transparent;
+    color: #1B73E8;
+}
+
+.more-tool {
+    color: #5F6367;
+    border: none;
+    background-color: transparent;
+
+}
+
+.more-tool::after {
+    content: "V";
+    margin-left: 6px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* height: 100vh; */
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    
+    & > .left {
+        flex: 4;
+        /* background-color: pink; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+
+        & > .title{
+            font-size: 52px;
+        }
+        & > .sub-title{
+            color: #5F6367;
+            
+        }
+        & > .action{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            
+        }
+        & > .sub-action{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            
+        }
+    }
+    & > .right {
+        flex: 6;
+        & > img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .section1 {
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+    }
+}

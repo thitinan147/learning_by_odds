@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div style=" height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; ">
+            <h1>Todo app</h1>
+            <div>
+                <input type="text" placeholder="Please input here">
+                <button>Add</button>
+            </div>
+            <div>
+                <ul id="taskList">
+                    <li>task 1 <button class="buttonDelete">Delete</button></li>
+                    <li>task 2 <button class="buttonDelete">Delete</button></li>
+                    <li>task 3 <button class="buttonDelete">Delete</button></li>
+                    <li>task 4 <button class="buttonDelete">Delete</button></li>
+                    <li>task 5 <button class="buttonDelete">Delete</button></li>  
+                </ul>
+            </div>
+        </div>
+   
+<script>
+    const input = document.querySelector('input');
+    const buttonAdd = document.querySelector('button');
+    const taskList = document.getElementById('taskList') ;
+    
+    buttonAdd.addEventListener('click', function(){
+        const li = document.createElement('li');
+        const buttonDelete = document.createElement('button');
+        buttonDelete.innerHTML = 'Delete';
+        buttonDelete.className = 'buttonDelete';
+        li.innerHTML = input.value;
+        li.appendChild(buttonDelete);
+        taskList.appendChild(li)
+        input.value = ''
+    })
+
+    // remove li element
+    taskList.addEventListener('click', function(event){
+        if (event.target.className === 'buttonDelete') {
+            const li = event.target.parentElement;
+            li.remove();
+        }
+    })
+
+</script>
+</body>
+</html>
