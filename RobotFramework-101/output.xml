@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-05-24T15:17:52.434080" rpa="false" schemaversion="5">
+<suite id="s1" name="Tek" source="/Users/tekni/Desktop/RobotFramework-101/tek.robot">
+<test id="s1-t1" name="register Form Demo ได้" line="4">
+<kw name="สามารถเปิดเว็บไซด์ web-demo qahive ได้" owner="keyword_tek">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:52.519658" level="INFO">Opening browser 'Chrome' to base url 'https://web-demo.qahive.com/form-demo'.</msg>
+<arg>${url_register_from_demo}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-24T15:17:52.519512" elapsed="1.982012"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:52.519087" elapsed="1.983029"/>
+</kw>
+<kw name="สามารถกรอก Username ได้" owner="keyword_tek">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:54.504079" level="INFO">Typing text 'thitinan147' into text field 'username'.</msg>
+<arg>username</arg>
+<arg>thitinan147</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-24T15:17:54.503610" elapsed="0.150187"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:54.502980" elapsed="0.150948"/>
+</kw>
+<kw name="สามารถกรอก Firstname ได้" owner="keyword_tek">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:54.654796" level="INFO">Typing text 'thitinan' into text field 'firstname'.</msg>
+<arg>firstname</arg>
+<arg>thitinan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-24T15:17:54.654607" elapsed="0.068827"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:54.654287" elapsed="0.069243"/>
+</kw>
+<kw name="สามารถกรอก Lastname ได้" owner="keyword_tek">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:54.724013" level="INFO">Typing text 'phikunsri' into text field '//input[@class='form-input lastname']'.</msg>
+<arg>//input[@class='form-input lastname']</arg>
+<arg>phikunsri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-24T15:17:54.723888" elapsed="0.074763"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:54.723695" elapsed="0.075047"/>
+</kw>
+<kw name="สามารถ click group button Gender โดยเลือก Male ได้" owner="keyword_tek">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:54.799256" level="INFO">Selecting 'Male' from radio button 'gender'.</msg>
+<arg>gender</arg>
+<arg>Male</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-05-24T15:17:54.799154" elapsed="0.047117"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:54.798946" elapsed="0.047420"/>
+</kw>
+<kw name="สามารถ click droupdown Select County โดยเลือก เลือกประเทศไทยได้" owner="keyword_tek">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/main/div/div/form/div[6]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-24T15:17:54.846728" elapsed="0.379800"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:55.227109" level="INFO">Selecting options from selection list 'xpath=//*[@id="root"]/main/div/div/form/div[5]/select' by value TH.</msg>
+<arg>xpath=//*[@id="root"]/main/div/div/form/div[5]/select</arg>
+<arg>TH</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-24T15:17:55.226806" elapsed="0.060165"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:54.846543" elapsed="0.440522"/>
+</kw>
+<kw name="สามารถ click button checkbox Accept agreement ได้" owner="keyword_tek">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:55.287546" level="INFO">Selecting checkbox '//input[@type='checkbox']'.</msg>
+<arg>//input[@type='checkbox']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-24T15:17:55.287429" elapsed="0.036598"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:55.287242" elapsed="0.036953"/>
+</kw>
+<kw name="สามารถกด button submit ได้" owner="keyword_tek">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-24T15:17:55.324818" level="INFO">Clicking button '//button[contains(@class,'btn btn-block')]'.</msg>
+<arg>//button[contains(@class,'btn btn-block')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-24T15:17:55.324688" elapsed="0.041069"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:55.324445" elapsed="0.041404"/>
+</kw>
+<status status="PASS" start="2024-05-24T15:17:52.518742" elapsed="2.847248"/>
+</test>
+<status status="PASS" start="2024-05-24T15:17:52.434857" elapsed="2.931463"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tek">Tek</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<section class="center-content">
+  <section class="user-list" >
+    <section class="header">
+      <h1>User List</h1>
+    </section>
+    <%= link_to 'Create User', register_path, class: 'btn btn-create create-button' %>
+    <section class="content">
+      <% @users.each do |user| %>
+        <div class="user-card">
+          <div class="user-info">
+            <p><strong>First Name:</strong> <%= user.firstName %></p>
+            <p><strong>Last Name:</strong> <%= user.lastName %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+          </div>
+          <div class="button-row-layout">
+            <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-edit' %>
+            <%= button_to 'Delete', delete_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+  </section>
+</section>

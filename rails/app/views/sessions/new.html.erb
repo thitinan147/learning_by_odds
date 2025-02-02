@@ -1,0 +1,28 @@
+<div>
+    <div style="display: flex; justify-content: center; align-items: center; width:100px; height: 50px; background-color:red;">
+        <span style="text-align: center;">Button</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px" >
+        <%# image and button %>
+        <h1 style: >image</h1>
+        <img width="30%" height="30%" src="https://scontent.fbkk7-2.fna.fbcdn.net/v/t39.30808-1/444483715_2890166387812422_4853098252176050180_n.jpg?stp=dst-jpg_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QaO0ZVKd5T4Q7kNvgFm_w62&_nc_ht=scontent.fbkk7-2.fna&oh=00_AYAK2IgXNTG_VJvb1al6bDhhUFT0LZwoZ2x7Mxa52sOdLg&oe=667F05A8"/>
+        <button name="button" type="submit" style="width: 100px; height: 50px;">Button</button>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+        <%# form register username emaild %>
+        <h1>Register</h1>
+        <form accept-charset="UTF-8" action="/" method="post">
+            <input name="authenticity_token" type="" value="" />
+
+            <%= label_tag 'answer' do %>
+                Give it to me: <%= text_field_tag 'answer', @prev_answer %>
+            <% end %>
+
+        </form>
+        <div>
+        <button name="back" type="button" onclick="history.back();">Back</button>
+        <button name="next" type="button" onclick="history.forward();">Next</button>
+        </div>
+    </div>
+</div>

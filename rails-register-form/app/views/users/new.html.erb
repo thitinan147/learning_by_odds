@@ -1,0 +1,81 @@
+<%= stylesheet_link_tag 'new', media: 'all', 'data-turbolinks-track': 'reload' %>
+<section class="center-content">
+  <%= form_with(model: @user, url: register_path, html: { class: 'user-form' }) do |form| %>
+    <section class="back-button">
+      <%= link_to '< Back', users_path, class: 'view-user-link' %>
+    </section>
+    <section class="header">
+      <h1>Register Form</h1>
+    </section>
+    <section class="two-column">
+      <section class="left-column">
+        <%= form.label :firstName, class: 'form-label' %>
+        <%= form.text_field :firstName, class: 'form-control' %>
+        <% if @user.errors[:firstName].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:firstName).join(", ") %></p>
+        <% end %>
+      </section>
+      <section class="right-column">
+        <%= form.label :lastName, class: 'form-label' %>
+        <%= form.text_field :lastName, class: 'form-control' %>
+        <% if @user.errors[:lastName].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:lastName).join(", ") %></p>
+        <% end %>
+      </section>
+    </section>
+    <section class="two-column">
+      <section class="left-column">
+        <%= form.label :birthDay, class: 'form-label' %>
+        <%= form.date_field :birthDay, class: 'form-control' %>
+        <% if @user.errors[:birthDay].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:birthDay).join(", ") %></p>
+        <% end %>
+      </section>
+      <section class="right-column">
+        <%= form.label :gender, "Gender", class: 'form-label' %>
+        <section class="form-radio-group">
+          <section class="radio-group">
+            <%= form.radio_button :gender, "Male", class: 'form-radio' %>
+            <%= form.label :gender, "Male", value: "Male", class: 'form-radio-label' %>
+          </section>
+          <section class="radio-group">
+            <%= form.radio_button :gender, "Female", class: 'form-radio' %>
+            <%= form.label :gender, "Female", value: "Female", class: 'form-radio-label' %>
+          </section>
+        </section>
+        <% if @user.errors[:gender].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:gender).join(", ") %></p>
+        <% end %>
+      </section>
+    </section>
+    <section class="two-column">
+      <section class="left-column">
+        <%= form.label :email, class: 'form-label' %>
+        <%= form.email_field :email, class: 'form-control' %>
+        <% if @user.errors[:email].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:email).join(", ") %></p>
+        <% end %>
+      </section>
+      <section class="right-column">
+        <%= form.label :phone, class: 'form-label' %>
+        <%= form.text_field :phone, class: 'form-control' %>
+        <% if @user.errors[:phone].any? %>
+          <p class="error-message"><%= @user.errors.full_messages_for(:phone).join(", ") %></p>
+        <% end %>
+      </section>
+    </section>
+    <section class="one-column">
+      <%= form.label :subject, class: 'form-label' %>
+      <%= form.select :subject, options_for_select([["HTML"], ["CSS"], ["JavaScript"]]), {}, { class: 'form-select' } %>
+    </section>
+    <section class="one-column">
+      <%= form.submit "Create", class: 'form-submit' %>
+    </section>
+  <% end %>
+</section>
+
+<%= form_for(@things) do |f| %>
+    
+<% end %>
+
+  
